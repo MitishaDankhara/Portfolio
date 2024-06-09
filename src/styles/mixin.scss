@@ -1,0 +1,51 @@
+@mixin flex_row {
+  display: flex;
+  align-items: center;
+}
+@mixin justify_center {
+  justify-content: center;
+}
+@mixin description($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+@mixin transition() {
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@mixin outline_btn() {
+  padding: 12px 40px;
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  text-transform: capitalize;
+  background-color: transparent;
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+  @include transition();
+  &:hover {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+@mixin section_padding() {
+  padding: 70px 0px;
+}
+@mixin fill_btn() {
+  padding: 12px 40px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  text-transform: capitalize;
+  background-color: var(--primary);
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+  @include transition();
+  &:hover {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+}

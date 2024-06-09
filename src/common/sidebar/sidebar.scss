@@ -1,0 +1,56 @@
+@import "../../styles/global.scss";
+.sidebar_main_layout {
+  width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: var(--sidebarBg);
+  text-align: center;
+  @include breakpoint("max-xl") {
+    width: 270px;
+  }
+  @include breakpoint("max-lg") {
+    width: 250px;
+  }
+  @include breakpoint("max-md") {
+    width: 220px;
+  }
+  .profile_image {
+    height: 160px;
+    width: 160px;
+    margin: 26px auto 16px;
+    img {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      border-radius: 100%;
+      outline: 6px solid var(--outline);
+    }
+  }
+  .owner_name {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .menu_bar_main {
+    padding-top: 20px;
+    .menu_list {
+      .menu_item {
+        padding: 10px 0px;
+        cursor: pointer;
+        a {
+          &.active {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+  .social_icons {
+    @include flex_row();
+    @include justify_center();
+    margin-top: 20px;
+    gap: 15px;
+    a {
+      color: var(--social_icon);
+    }
+  }
+}

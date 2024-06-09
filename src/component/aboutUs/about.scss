@@ -1,0 +1,45 @@
+@import "../../styles/global.scss";
+.about_me {
+  @include section_padding();
+  background-color: var(--bg1);
+  .about_mySelf_flex {
+    @include flex_row();
+    .about_content {
+      max-width: 60%;
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        span {
+          color: var(--primary);
+        }
+      }
+      p {
+        color: var(--primary_font);
+        padding-top: 18px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 1.2px;
+      }
+    }
+    .about_info {
+      margin-left: 20px;
+      .email {
+        color: var(--primary);
+      }
+      p {
+        padding: 16px 0px;
+        border-bottom: 1px solid var(--white);
+        b {
+          color: var(--white);
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .fill_btn {
+        @include fill_btn();
+        margin-top: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.about_me_heading {
+  position: relative;
+  font-size: 132px;
+  color: rgba(108, 117, 125, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+  .upper_heading {
+    position: absolute;
+    top: 35%;
+    height: 100%;
+    width: 100%;
+    font-size: 36px;
+    color: var(--white);
+    text-transform: capitalize;
+    font-weight: 500;
+    &::after {
+      position: absolute;
+      bottom: 118px;
+      left: 43%;
+      background-color: var(--primary);
+      height: 3px;
+      width: 130px;
+      content: "";
+      border-radius: 20px;
+    }
+  }
+}

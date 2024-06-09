@@ -1,0 +1,55 @@
+@import "../../styles/global.scss";
+
+.home_sec {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  .home_sec_bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .black_blur_layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .home_sec_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; // Center text
+        .welcome_text {
+          font-weight: 400;
+          font-size: 26px;
+        }
+        .animation_text {
+          font-size: 60px;
+          padding: 20px 0px;
+          b {
+            font-weight: 600;
+          }
+        }
+        .add_text {
+          font-size: 24px;
+        }
+        .hire_btn {
+          @include outline_btn();
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}

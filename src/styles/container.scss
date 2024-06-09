@@ -1,11 +1,11 @@
 @import "./breakpoint.scss";
 .container {
-  max-width: 1280px;
-  margin: 0px auto;
+  // max-width: 1280px;
+  margin: 0px 30px;
   padding: 0px 30px;
   box-sizing: border-box;
   @include breakpoint("max-lg") {
-    max-width: 992px;
+    // max-width: 992px;
     padding: 0px 20px;
   }
   @include breakpoint("max-md") {
