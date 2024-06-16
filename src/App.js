@@ -4,6 +4,7 @@ import Home from "./component/Home";
 import AboutMe from "./component/aboutUs";
 import "./styles/global.scss";
 import Service from "./component/Service";
+import Resume from "./component/Resume";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Element>
         <Element name="what_i_do">
           <Service />
+        </Element>
+        <Element name="resume">
+          <Resume />
         </Element>
       </div>
     </div>

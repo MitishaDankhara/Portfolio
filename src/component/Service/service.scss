@@ -1,16 +1,44 @@
 @import "../../styles/global.scss";
 .service_sec {
   @include section_padding();
-  height: 100vh;
   background-color: var(--bg2);
   .service_card_grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include flex_row();
+    flex-direction: column;
     gap: 20px;
     .card_item {
-      @include flex_row();
-      align-items: start;
-      gap: 10px;
+      border: 1px solid var(--social_icon);
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      @include transition();
+      &:hover {
+        box-shadow: 4px 4px var(--social_icon);
+        svg {
+          color: var(--white);
+        }
+        .card_heading {
+          color: var(--primary);
+          @include transition();
+        }
+      }
+      svg {
+        color: var(--primary);
+        background-color: var(--bg1);
+        padding: 12px;
+        border-radius: 8px;
+        @include transition();
+      }
+      .card_heading {
+        color: var(--white);
+        font-size: 20px;
+        margin: 10px 0px;
+      }
+      p {
+        color: var(--primary_font);
+      }
     }
   }
 }

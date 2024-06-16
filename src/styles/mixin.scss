@@ -49,3 +49,32 @@
     border-color: var(--primary);
   }
 }
+@mixin resume_card() {
+  background-color: var(--sidebarBg);
+  padding: 30px 22px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  @include transition();
+  &:hover {
+    border-color: var(--primary);
+    box-shadow: 4px 4px var(--primary);
+  }
+  .year {
+    padding: 4px 6px;
+    background-color: var(--primary);
+    border-radius: 6px;
+    margin-bottom: 16px;
+  }
+  .card_heading {
+    font-size: 21px;
+    font-weight: 600;
+    margin: 18px 0px 6px;
+  }
+  .uni_name {
+    color: var(--primary);
+    margin-bottom: 18px;
+  }
+  p {
+    color: var(--primary_font);
+  }
+}

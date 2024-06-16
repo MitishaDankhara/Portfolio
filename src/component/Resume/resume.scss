@@ -1,0 +1,43 @@
+@import "../../styles/global.scss";
+.resume_section {
+  background-color: var(--bg1);
+  @include section_padding();
+  .education_heading {
+    margin: 24px 0px;
+  }
+  .education_column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    .education_card {
+      @include resume_card();
+    }
+  }
+  .exeperience_column {
+    .exeperience_card {
+      @include resume_card();
+    }
+  }
+  .skill_heading {
+    margin: 40px 0px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    .skill_bar {
+      .skill_name_flex {
+        @include flex_row();
+        justify-content: space-between;
+        margin: 6px 20px;
+      }
+    }
+  }
+  .download_btn {
+    text-align: center;
+    margin-top: 30px;
+    .border_btn {
+      @include outline_btn();
+    }
+  }
+}

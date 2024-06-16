@@ -18,6 +18,7 @@ export default function Sidebar() {
     },
     {
       Menu: "Resume",
+      to: "resume",
     },
     {
       Menu: "Portfolio",
